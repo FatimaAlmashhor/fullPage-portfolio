@@ -1,6 +1,6 @@
 
 
-window.addEventListener('load' , e => {
+window.addEventListener('DOMContentLoaded' , e => {
   document.querySelector('.loading').style.display  =  'none';
   document.querySelector('.portfolio').style.display  = '' ;
 })
