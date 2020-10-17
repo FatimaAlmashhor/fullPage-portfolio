@@ -63,7 +63,7 @@ position: absolute;
   right : 80px ;
   border : 20px solid burlywood ;
   transform: rotate(20deg);
-  transition: all 0.5s ease-in-out;
+  transition: all 0.6s ease-out;
 }
 .bg-frame--big{
   width :700px;
@@ -90,15 +90,21 @@ h1 {
   font-family: "Abril Fatface";
     z-index: 200
 }
-.fatima {
+.text-heading {
   width: 300px;
+}
+.fatima {
   text-transform: capitalize;
   position: absolute;
-  top : 30% ;
+  /* top : 30% ; */
   right : 400px ;
   transition: all 0.5s ease-in-out;
 }
-
+.section-header{
+  position: absolute;
+  top: 20%;
+  margin: 0px 10%;
+}
 /* fullPage designing */
   #parallax {
     width : 100% ;
