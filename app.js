@@ -2,7 +2,7 @@
 
 window.addEventListener('DOMContentLoaded' , e => {
   document.querySelector('.loading').style.display  =  'none';
-  document.querySelector('.portfolio').style.display  = '' ;
+  document.querySelector('.portfolio').style.display  = 'block' ;
 })
 var myFullpage = new fullpage('#parallax', {
   autoScrolling:true,
