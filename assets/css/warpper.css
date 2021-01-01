@@ -1,0 +1,123 @@
+/* Clip-path transition */
+.clip-leave {
+  opacity: 1;
+}
+.clip-leave-active {
+  transition: opacity 0.5s ease-in;
+}
+.clip-leave-to {
+  opacity: 0;
+}
+.clip-enter {
+  clip-path: circle(0%);
+}
+.clip-enter-active {
+  transition: all 0.75s ease-in-out;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+}
+.clip-enter-to {
+  clip-path: circle(95%);
+}
+/* this is design of the page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Josefin Sans', sans-serif;
+}
+.warpper-project {
+  background-color: black;
+  width: 100%;
+  color: white;
+  min-height: 100vh;
+  padding: 50px;
+  overflow-x: hidden;
+}
+.project-title {
+  font-size: 9rem;
+}
+.project-type {
+  font-size: 1.5rem;
+  margin: 10px;
+  width: 110px;
+  padding-bottom: 10px;
+  border-bottom: 5px solid burlywood;
+}
+.project-descrept {
+  width: 40%;
+  font-size: 1.3rem;
+  margin: 90px 50px 0px;
+  padding: 10px;
+}
+.highlight {
+  background-color: #fff2ac;
+  background-image: linear-gradient(to right, #ffe359 0%, #fff2ac 100%);
+}
+.project-content {
+  display: flex;
+  flex-direction: row-reverse;
+}
+.project-show {
+  width: 50%;
+  flex: 50%;
+  height: auto;
+}
+.project-show svg {
+  z-index: 20;
+  width: 90%;
+}
+#scene {
+  width: 100%;
+  height: auto;
+}
+.img {
+  position: absolute;
+}
+.img-brach {
+  width: 500px;
+  right: 30%;
+  top: 20%;
+}
+.img-stain {
+  top: 100%;
+  width: 400px;
+  right: 1%;
+}
+.img-star {
+  width: 50px;
+  right: 10px;
+  top: 30%;
+}
+.project-descrept {
+  width: 50%;
+  flex: 50%;
+  letter-spacing: 4px;
+}
+.bg-frame {
+  width: 500px;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 40%;
+  right: 100px;
+  border: 20px solid burlywood;
+  transform: rotate(10deg);
+  transition: all 0.6s ease-out;
+}
+@media all and (max-width: 900px) {
+  .project-content {
+    display: flex;
+    flex-direction: column;
+  }
+  .project-show {
+    width: 100%;
+    flex: 100%;
+  }
+  .project-descrept {
+    width: 100%;
+    flex: 100%;
+  }
+}

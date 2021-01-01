@@ -11,41 +11,47 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.9/fullpage.min.css" integrity="sha512-8M8By+q+SldLyFJbybaHoAPD6g07xyOcscIOQEypDzBS+sTde5d6mlK2ANIZPnSyxZUqJfCNuaIvjBUi8/RS0w==" crossorigin="anonymous" />
     <link rel="stylesheet" href="./assets/css/fullpage.min.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
     <title>Fatima Almashhor</title>
 </head>
-<body>
+<body data-barba="wrapper">
     <div class="loading">
         <div class="loader"></div>
         <div class="loader-fatima">FATIMA AMIN</div>
     </div>
-    <div class='portfolio'>
-      <div class="bg-frame"></div>
+    <div class='portfolio' data-barba="container" data-barba-namespace="home">
+      <p class='counter'><span id='slid-number'></span>/4</p>
+      <div  class='bg-frame '></div>
       <div class="bg-frame--big"></div>
       <div id='parallax' >
         <div class=' section section-1 active'>
-          <p class='counter'>1/4</p>
+         
           <div class="text-heading">
+            
             <h1 class='fatima'>FATIMA ALMASHHOR</h1>
+            <h2 class="vertical-text">PORTIFOLIO</h2>
           </div>
         </div>
         <div class=' section section-2' >
-          <p class='counter'>2/4</p>
+          
+          <h2 data-depth="0.2" class="vertical-text t-right">PROJECTS</h2>
+
           <div class="slide active">
+          <!-- <div class='hidden-swepper'></div> -->
             <div class='slid__img-picker slide-1'>
-              <img src='./assets/images/mockup1.jpg' alt ='project1'/>
+              <!-- <img src='./assets/images/mockup1.jpg' alt ='project1'/> -->
             </div>
-            <h1 class='slid__heading-picker'>ECOMMERCE</h1>
+            <h1 class='slid__heading-picker'>Ecommerce</h1>
             <div class="slid__details">
               <p class='slid__details__pargraph'>Website</p>
-              <button class='btn' >SHOW IT</button>
+              <a href ="warpper.html" ><button  class='btn'>SHOW IT</button></a>
             </div>
           </div>
-          <div class="slide ">
+          <div  class="slide ">
             <div class='slid__img-picker slide-2'>
-              <img src='./assets/images/mockup1.jpg' alt ='project1'/>
+              <!-- <img src='./assets/images/mockup1.jpg' alt ='project1'/> -->
             </div>
-            <h1 class='slid__heading-picker'>ECOMMERCE</h1>
+            <h1 class='slid__heading-picker'>Exhale</h1>
             <div class="slid__details">
               <p class='slid__details__pargraph'>Website</p>
               <button class='btn' >SHOW IT</button>
@@ -53,25 +59,39 @@
           </div>
           <div class="slide">
             <div class='slid__img-picker slide-3'>
-              <img src='./assets/images/mockup1.jpg' alt ='project1'/>
+              <!-- <img src='./assets/images/mockup1.jpg' alt ='project1'/> -->
             </div>
-            <h1 class='slid__heading-picker'>ECOMMERCE</h1>
+            <h1 class='slid__heading-picker'>Covid-app</h1>
+            <div class="slid__details">
+              <p class='slid__details__pargraph'>Mobile App</p>
+              <button class='btn' >SHOW IT</button>
+            </div>
+          </div>
+          <div class="slide">
+            <div class='slid__img-picker slide-3'>
+              <!-- <img src='./assets/images/mockup1.jpg' alt ='project1'/> -->
+            </div>
+            <h1 class='slid__heading-picker'>HangMan Game</h1>
             <div class="slid__details">
               <p class='slid__details__pargraph'>Website</p>
               <button class='btn' >SHOW IT</button>
             </div>
           </div>
-          <div class="slide"><h1>And more text</h1></div>
         </div>
         <div class=' section section-3'>
-          <p class='counter'>3/4</p>
-         <h1 class='section-header'>ABOUT ME</h1>
+          <h2 class="vertical-text">HOW AM I</h2>
+         <h1 class='section-header right'>ABOUT ME</h1>
          <p></p>
         </div>
         <div class=' section section-4'>
-          <p class='counter'>4/4</p>
-          <h1 class='section-header'>KEEP IN TOUCH</h1>
-          <ul class='conect-with-me'>
+          <h2 class="vertical-text t-right">GET IN TOUCH</h2>
+           <!-- circles
+            <svg id="circle-radar-1" class="circles circles-radar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 406 406">
+              <circle id="circle-path" class="st0" cx="203" cy="203" r="202.5"/>
+            </svg> -->
+                        
+          <h1 class='section-header right'>KEEP IN TOUCH</h1>
+          <ul class='connect-with-me'>
             <li><a>GitHub</a></li>
             <li><a>Linkedin</a></li>
             <li><a>ُEmail</a></li>
@@ -83,9 +103,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
-    <script src='./app.js' ></script>
-    <script type="text/javascript">
-      
-    </script>
+    <script src="https://cdn.jsdelivr.net/npm/@barba/core"></script>
+    <script src='./assets/js/app.js' ></script>
 </body>
 </html>
