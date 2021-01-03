@@ -32,6 +32,14 @@ body {
   background-color: transparent;
   animation: rota 2s ease-in-out 0.8s infinite;
 }
+@keyframes rota {
+  from {
+    transform: rotateX(45deg);
+  }
+  to {
+    transform: rotateX(365deg);
+  }
+}
 .loader-fatima {
   position: absolute;
   left: 30px;
@@ -55,9 +63,11 @@ body {
   right: 20%;
 }
 .connect-with-me {
+  position: absolute;
+  bottom: 0px;
   display: flex;
   justify-content: center;
-  width: 500px;
+  width: 100%;
   list-style-type: none;
   margin: 40% auto 0px;
 }
@@ -261,7 +271,7 @@ h1 {
     margin: 80% 10px 0px;
   }
 }
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 510px) {
   h1 {
     width: 5px;
     font-size: 2rem;
@@ -272,9 +282,20 @@ h1 {
     right: 0px;
     top: 100px;
   }
+  .section-header {
+    top: 30%;
+    margin: 0px 10%;
+    width: 200px;
+  }
   .bg-frame {
     width: 150px;
     height: 150px;
     border-width: 10px;
   }
+  .vertical-text {
+    display: none;
+  }
+  /* .connect-with-me {
+    width: 100%;
+  } */
 }

@@ -35,7 +35,7 @@ a {
   background-color: black;
   width: 100%;
   color: white;
-  max-height: 100vh;
+  min-height: 100vh;
   padding: 50px;
   overflow-x: hidden;
   background-color: radial-gradient(gray, black);
@@ -138,8 +138,17 @@ a {
   display: flex;
   flex-direction: row;
 }
-.nav > div {
-  margin-right: 50px;
+.contect-me {
+  display: flex;
+  writing-mode: vertical-rl;
+  position: absolute;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.contect-me > * {
+  margin: 50px 40px 50px 10px;
+  /* writing-mode: vertical-rl; */
 }
 #menu {
   text-align: center;
@@ -252,6 +261,7 @@ a {
   .project-descrept {
     width: 100%;
     flex: 100%;
+    margin: 40px 10px 0px;
   }
   .bg-frame {
     width: 250px;
@@ -265,5 +275,10 @@ a {
   }
   #scene {
     height: auto;
+  }
+}
+@media all and (max-width: 555px) {
+  .contect-me {
+    top: 70%;
   }
 }

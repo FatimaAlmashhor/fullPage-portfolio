@@ -1,7 +1,17 @@
-window.addEventListener('DOMContentLoaded' , e => {
+window.addEventListener('load' , e => {
   document.querySelector('.loading').style.display  =  'none';
   document.querySelector('.portfolio').style.display  = 'block' ;
+ 
 })
+// document.onreadystatechange = function() { 
+//   if (document.readyState !== "complete") { 
+//         document.querySelector("body").style.visibility = "hidden"; 
+//         document.querySelector(".loading'").style.visibility = "visible"; 
+//     } else { 
+//         document.querySelector(".loading'").style.display = "none"; 
+//         document.querySelector("body").style.visibility = "visible"; 
+//     } 
+// }; 
 var slideNumber = document.getElementById('slid-number');
 slideNumber.textContent = 1 ;
 var rotate = 45 ;
