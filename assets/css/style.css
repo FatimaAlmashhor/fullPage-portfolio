@@ -212,6 +212,7 @@ h1 {
   transform: translateX(-100%);
   background-color: burlywood;
 }
+
 /* response */
 @media screen and (max-width: 900px) {
   h1 {
