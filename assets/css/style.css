@@ -51,7 +51,6 @@ body {
 .vertical-text {
   writing-mode: vertical-rl;
   text-orientation: mixed;
-  margin-left: 200px;
   font-size: 7rem;
   opacity: 0.4;
   -webkit-text-stroke-color: white;
@@ -126,11 +125,11 @@ h1 {
 .section-header {
   position: absolute;
   top: 40%;
-  margin: 0px 10%;
+  margin: 0px 0% 0 8px;
   width: 400px;
 }
 .right {
-  right: 10%;
+  right: 4%;
 }
 /* fullPage designing */
 #parallax {
@@ -222,7 +221,29 @@ h1 {
   transform: translateX(-100%);
   background-color: burlywood;
 }
-
+.about-me {
+  position: absolute;
+  top: 45%;
+  left: 30%;
+  transform: translate(-45%, -30%);
+  letter-spacing: 4px;
+  margin: 30px 30px;
+  width: 40%;
+}
+.clip {
+  background-color: burlywood;
+  width: 100%;
+  min-height: 100vh;
+  clip-path: circle(0%);
+  /* transform: rotate(45deg); */
+  /* transform: scale(0); */
+  transition: all 0.3s ease-in;
+  z-index: 2000;
+}
+/* .zing {
+  z-index: 200000;
+  -webkit-text-stroke-color: gray;
+} */
 /* response */
 @media screen and (max-width: 900px) {
   h1 {
@@ -270,6 +291,14 @@ h1 {
   .connect-with-me {
     margin: 80% 10px 0px;
   }
+  .about-me {
+    width: 100%;
+    margin: 20px;
+    top: 52%;
+    left: 0%;
+    transform: translate(0%, 0%);
+    letter-spacing: 3px;
+  }
 }
 @media screen and (max-width: 510px) {
   h1 {
@@ -295,7 +324,7 @@ h1 {
   .vertical-text {
     display: none;
   }
-  /* .connect-with-me {
-    width: 100%;
-  } */
+  .connect-with-me {
+    bottom: 10%;
+  }
 }

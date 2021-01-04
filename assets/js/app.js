@@ -30,13 +30,17 @@ new fullpage('#parallax', {
   parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
   afterLoad: function(origin, destination, direction){
-  //   tl.to('.bg-frame', 0.001,
-  // {
-  //     delay: 0.2,
-  //     rotate: rotate,
-  //     ease: Back.easeInOut,
-  //     } ,
-  //   ) ;
+    if (origin.index === 2){
+      gsap.to('.clip', 0.001,
+        {
+          duration:0.8,
+          clipPath: 'circle(100%)',
+          // opacity:1,
+          ease: Back.easeIn,
+          
+        } ,
+      ) ;
+    }
   },
   onLeave: function(anchorLink, index, slideAnchor, slideIndex){
    
@@ -54,7 +58,7 @@ new fullpage('#parallax', {
     let section  = index.item ;
     let h1 = section.querySelector('h1') ;
       tl.fromTo(h1 , 1 , {y : '-350' , opacity : 0, duration: 0.9} , {y : 0 , opacity : 1 }) ;
-    
+      
     if(index.index === 1  ) {
       slideNumber.textContent = 2 ; 
       let project = section.querySelector('.slid__img-picker');
@@ -66,11 +70,25 @@ new fullpage('#parallax', {
        
     }
     else if(index.index === 2)
+    {
+      gsap.to('.clip', 0.001,
+        {
+          duration:0.9,
+          // opacity:0,
+          clipPath: 'circle(0%)',
+          ease: Back.easeInOut,
+          
+        } 
+      ) ;
       slideNumber.textContent = 3 ;
+    }
     else if(index.index === 3)
-      slideNumber.textContent = 4 ;
-    else 
+    {
+       slideNumber.textContent = 4 ;
+    }
+    else {
       slideNumber.textContent = 1 ;
+    }
   }
   
 });
