@@ -13,26 +13,28 @@
                 <div onclick="goBackFromMnue()" class="back-from-menu">Back</div>
                 <div  class='cutting-frame '></div>
                 <div id ='project-menu'>
-                    <div id ='ecommerce'>Ecommerce</div>
-                    <div id ='exhale'>Exhale</div>
-                    <div id ='covid'>Covid-app</div>
-                    <div id ='hangman'>Hangman</div>
+                    <a href="warpper.html"><div id ='ecommerce'>Ecommerce</div></a>
+                    <a href="exhale.html"><div id ='exhale'>Exhale</div>  </a>
+                    <a href="covid.html"><div id ='covid'>Covid-app</div></a>
+                    <a href="hangman.html"><div id ='hangman'>Hangman</div></a>
                 </div>
             </div>
         </div>
         <div id='cover'></div>
         <div class='navbar'>
             <div class='nav'>
-                <div style='flex: 1'><a href=''>Back</a></div>
-                <div><a  href=''>Linkedin</a></div>
-                <div><a  href='' >GitHub</a></div>
-                <div><a  href=''>Resume</a></div>
+                <div style='flex: 1'><a href='index.html'>Back</a></div>
                 <div id='menu'>menu</div>
             </div>
         </div>
+        <div class='contect-me'>
+            <div><a  href='https://www.linkedin.com/in/fatima-almashhor-b89b841b1/'>Linkedin</a></div>
+            <div><a  href='https://github.com/FatimaAlmashhor' >GitHub</a></div>
+            <div><a  href='https://docs.google.com/document/d/1bGj3kNxNNZfQ4SpiTvQ3JSWIJWz2t9DFpuudIqHU24U/edit?usp=sharing'>Resume</a></div>
+        </div>
         <div class='page-content'>
-            <div class=' content exhale '>
-                <h1 class='project-title'>Exhale</h1>
+            <div class='content ecommerce'>
+                <h1 class='project-title'>Covid app</h1>
                 <p class='project-type '>WEBSITE</p>
                 
                 <div class="project-content">
@@ -42,20 +44,20 @@
                         </svg> -->
                         <div data-relative-input="true" id='scene'>
                             <div data-depth='0.9' class='bg-frame '></div>
-                            <img data-depth='0.2' class=" img img-brach" src='./assets//images/klipartz.com (1).png' />
-                            <img data-depth='0.7'class=" img img-stain" src='./assets//images/klipartz.com (4).png' />
-                            <img data-depth='0.1' class=" img img-star" src='./assets//images/klipartz.com (5).png' /> 
+                            <img data-depth='0.2' class=" img img-brach" src='./assets//images/klipartz.com (1).png' loading="lazy" />
+                            <img data-depth='0.7'class=" img img-stain" src='./assets//images/klipartz.com (4).png' loading="lazy" />
+                            <img data-depth='0.1' class=" img img-star" src='./assets//images/klipartz.com (5).png' loading="lazy" /> 
                         </div>  
                     </div>
                     <div class='project-descrept'>
                         <p>Created an eCommerce website using HTML, JavaScript, CSS and PHP. The purpose of this specific website was to provide a platform for selling devices for the company. This website utilized databases through MYSQL. The website consists of an admin page to detect sold out items, add items, and to manage users and employees. The user can create a profile, add their items to a cart and can write comments for specific items</p>
-            
                         <div class='project-descript-links'>
                             <span><a href=''>Demo</a></span><span class='slash'>/</span><span><a href=''>GitHub</a></span>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
@@ -107,7 +109,7 @@
                 rotate: 45,
                 ease: Back.easeOut,
             });
-            projectMenu = document.querySelectorAll('#project-menu > div');
+            projectMenu = document.querySelectorAll('#project-menu > a ');
            projectMenu.forEach(element => {
             tl.fromTo(element , .6 , {x : '-350' , opacity : 0, duration: 0.3} , {x : 0 , opacity : 1 }) ;
            });

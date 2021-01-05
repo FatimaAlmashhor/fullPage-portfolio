@@ -13,6 +13,7 @@ body {
   background-color: black;
   color: white;
   transition: all 0.3s ease-in-out;
+  scroll-behavior: smooth;
 }
 
 /* loading the page */
@@ -34,11 +35,14 @@ body {
 }
 @keyframes rota {
   from {
-    transform: rotateX(45deg);
+    transform: rotate(0deg);
   }
   to {
-    transform: rotateX(365deg);
+    transform: rotate(360deg);
   }
+}
+.portfolio {
+  display: none;
 }
 .loader-fatima {
   position: absolute;
@@ -63,15 +67,16 @@ body {
 }
 .connect-with-me {
   position: absolute;
-  bottom: 0px;
+  top: 0px;
   display: flex;
+  margin: 0px;
   justify-content: center;
-  width: 100%;
+  width: 60%;
   list-style-type: none;
-  margin: 40% auto 0px;
+  /* margin: 40% auto 0px; */
 }
 .connect-with-me li {
-  margin: 40px;
+  margin: 20px 40px;
 }
 .bg-frame {
   width: 400px;
@@ -240,10 +245,19 @@ h1 {
   transition: all 0.3s ease-in;
   z-index: 2000;
 }
-/* .zing {
-  z-index: 200000;
-  -webkit-text-stroke-color: gray;
-} */
+.schedule {
+  position: absolute;
+  top: 20px;
+  left: 10%;
+  width: 40%;
+  height: 90vh;
+  overflow: hidden;
+}
+.xs-top {
+  width: 30%;
+  text-align: end;
+  overflow: hidden;
+}
 /* response */
 @media screen and (max-width: 900px) {
   h1 {
@@ -289,7 +303,7 @@ h1 {
     right: 31%;
   }
   .connect-with-me {
-    margin: 80% 10px 0px;
+    margin: 0px 10px 0px;
   }
   .about-me {
     width: 100%;
@@ -300,7 +314,7 @@ h1 {
     letter-spacing: 3px;
   }
 }
-@media screen and (max-width: 510px) {
+@media screen and (max-width: 540px) {
   h1 {
     width: 5px;
     font-size: 2rem;
@@ -312,19 +326,39 @@ h1 {
     top: 100px;
   }
   .section-header {
-    top: 30%;
+    top: 20%;
     margin: 0px 10%;
     width: 200px;
   }
   .bg-frame {
-    width: 150px;
-    height: 150px;
+    top: 10%;
+    right: -40px;
+    width: 200px;
+    height: 200px;
     border-width: 10px;
   }
   .vertical-text {
     display: none;
   }
   .connect-with-me {
-    bottom: 10%;
+    width: 100%;
+    z-index: 100;
+  }
+  .about-me {
+    top: 37%;
+  }
+  .clip {
+    z-index: 300;
+  }
+  .xs-top {
+    top: 0px;
+    width: auto;
+    font-size: 2rem;
+  }
+  .schedule {
+    width: 90%;
+    top: 30px;
+    margin: 3px auto;
+    left: 5%;
   }
 }
