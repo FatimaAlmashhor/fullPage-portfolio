@@ -39,20 +39,20 @@
                 
                 <div class="project-content">
                     <div class='project-show'>
-                        <!-- <svg class='device-show' width="655" height="328" viewBox="0 0 655 328" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 118L235 0.5L655 210.5L420 328L0 118Z" fill="#026FC2"/>
-                        </svg> -->
                         <div data-relative-input="true" id='scene'>
-                            <div data-depth='0.9' class='bg-frame '></div>
-                            <img data-depth='0.2' class=" img img-brach" src='./assets//images/klipartz.com (1).png' loading="lazy" />
-                            <img data-depth='0.7'class=" img img-stain" src='./assets//images/klipartz.com (4).png' loading="lazy" />
-                            <img data-depth='0.1' class=" img img-star" src='./assets//images/klipartz.com (5).png' loading="lazy" /> 
-                        </div>  
+                            <div data-depth='0.8' class='bg-frame '></div>
+                            <img data-depth='0.2' class=" img img-brach" src='./assets//images/klipartz.com (1).png'  />
+                            <img data-depth='0.7'class=" img img-stain" src='./assets//images/klipartz.com (4).png'  />
+                            <img data-depth='0.1' class=" img img-star" src='./assets//images/klipartz.com (5).png'  /> 
+                            <div class='image-container'>
+                                <img class='project-img' src='./assets/images/ecommerce-home.PNG' alt='project'/> 
+                            </div>
+                        </div> 
                     </div>
                     <div class='project-descrept'>
                         <p>Created an eCommerce website using HTML, JavaScript, CSS and PHP. The purpose of this specific website was to provide a platform for selling devices for the company. This website utilized databases through MYSQL. The website consists of an admin page to detect sold out items, add items, and to manage users and employees. The user can create a profile, add their items to a cart and can write comments for specific items</p>
                         <div class='project-descript-links'>
-                            <span><a href=''>Demo</a></span><span class='slash'>/</span><span><a href=''>GitHub</a></span>
+                            <span><a href=''>Demo</a></span><span class='slash'>/</span><span><a href='https://github.com/FatimaAlmashhor/Ecommerce-php-mysql'>GitHub</a></span>
                         </div>
                     </div>
                 </div>
@@ -62,7 +62,8 @@
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/CSSRulePlugin.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="./assets/js/app.js" ></script>
     <script>
         window.addEventListener('DOMContentLoaded' , e => {
@@ -75,6 +76,19 @@
              tl.fromTo('.project-type' , .6 , {x : '-350' , opacity : 0, duration: 0.3} , {x : 0 , opacity : 1 }) ;
              tl.fromTo('.project-descrept' , .6 , {x : '-350' , opacity : 0, duration: 0.3} , {x : 0 , opacity : 1 }) ;
              tl.fromTo('.project-descript-links' , .6 , {x : '-350' , opacity : 0, duration: 0.3} , {x : 0 , opacity : 1 }) ;
+             gsap.registerPlugin(CSSRulePlugin);
+             const rule = CSSRulePlugin.getRule(".image-container:after");
+             let tl2 = new TimelineMax({delay : 0.3}) ;
+             tl2.to(rule, { duration: 1, width: "100%", ease: "Power2.ease" })
+            .to(rule, { duration: 0, right: 0, left: "unset" })
+            .to(rule, { duration: 1, width: "0%", ease: "Power2.ease" })
+            .to("img", { duration: 0.2, opacity: 1, delay: -1 })
+            .from("img", {
+                duration: 1,
+                scale: 1.4,
+                ease: "Power2.easeInOut",
+                delay: -1.2
+            });
         }
         var scene = document.getElementById('scene');
         var parallaxInstance = new Parallax(scene);

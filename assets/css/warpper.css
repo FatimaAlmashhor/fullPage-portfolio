@@ -31,13 +31,16 @@ a {
   text-decoration: none;
   color: white;
 }
+body,
+html {
+  overflow-x: hidden;
+}
 .warpper-project {
   background-color: black;
   width: 100%;
   color: white;
   min-height: 100vh;
   padding: 50px;
-  overflow-x: hidden;
   background-color: radial-gradient(gray, black);
 }
 .project-title {
@@ -65,9 +68,9 @@ a {
   flex-direction: row-reverse;
 }
 .project-show {
-  width: 50%;
+  width: 60%;
+  height: 100%;
   flex: 50%;
-  height: auto;
 }
 .project-show svg {
   z-index: 20;
@@ -75,13 +78,37 @@ a {
 }
 #scene {
   width: 100%;
-  height: 100vh;
+  height: auto;
+  margin: 0px auto 30% auto;
+  /* position: relative; */
   /* overflow: hidden; */
 }
 .device-show {
   position: absolute;
   right: -100px;
 }
+.image-container {
+  position: relative;
+  overflow: hidden;
+}
+.image-container::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: burlywood;
+}
+.project-img {
+  width: 90%;
+  height: auto;
+  z-index: 1000;
+  opacity: 0;
+  border: 1px solid burlywood;
+  transform: all 0.5s ease;
+}
+
 .img {
   position: absolute;
 }
@@ -89,32 +116,34 @@ a {
   width: 500px;
   right: 30%;
   top: 20%;
+  /* z-index: 1001; */
 }
 .img-stain {
-  top: 100%;
-  width: 400px;
+  top: 300%;
+  width: 500px;
   right: 1%;
+  /* z-index: 1001; */
 }
 .img-star {
-  width: 50px;
+  width: 100px;
   right: 10px;
   top: 30%;
 }
 .project-descrept {
-  width: 50%;
-  flex: 50%;
+  width: 30%;
+  flex: 30%;
   letter-spacing: 4px;
 }
 .bg-frame {
-  width: 400px;
-  height: 400px;
+  width: 550px;
+  height: 550px;
   display: flex;
   align-items: center;
   position: absolute;
-  top: 40%;
+  top: 20%;
   right: 100px;
   border: 20px solid burlywood;
-  transform: rotate(10deg);
+  transform: rotate(45deg);
   transition: all 0.6s ease-out;
 }
 .project-descript-links {
@@ -139,12 +168,13 @@ a {
   flex-direction: row;
 }
 .contect-me {
+  position: fixed;
   display: flex;
   writing-mode: vertical-rl;
   position: absolute;
   left: 0px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 80%;
+  /* transform: translateY(-80%); */
 }
 .contect-me > * {
   margin: 50px 40px 50px 10px;
@@ -264,17 +294,23 @@ a {
     margin: 40px 10px 0px;
   }
   .bg-frame {
-    width: 250px;
-    height: 250px;
-    border-width: 10px;
+    width: 450px;
+    height: 450px;
+    border-width: 20px;
   }
   .project-descrept {
     width: 100%;
     margin: 10px 10px 0px;
     padding: 10px;
   }
-  #scene {
-    height: auto;
+  .contect-me {
+    top: 50%;
+  }
+  .img-brach {
+    width: 400px;
+  }
+  .project-img {
+    width: 100%;
   }
 }
 @media all and (max-width: 555px) {

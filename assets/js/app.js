@@ -30,6 +30,7 @@ new fullpage('#parallax', {
   parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},
 
   afterLoad: function(origin, destination, direction){
+    document.querySelector('.connect-with-me').style.display = 'flex'
     if (origin.index === 2){
       gsap.to('.clip', 0.001,
         {
@@ -40,6 +41,10 @@ new fullpage('#parallax', {
           
         } ,
       ) ;
+    }
+    if (origin.index === 4){
+      document.querySelector('.connect-with-me').style.display = 'none'
+      console.log('here');
     }
   },
   onLeave: function(anchorLink, index, slideAnchor, slideIndex){
@@ -61,13 +66,7 @@ new fullpage('#parallax', {
       
     if(index.index === 1  ) {
       slideNumber.textContent = 2 ; 
-      let project = section.querySelector('.slid__img-picker');
-      project.addEventListener('click' , e => {
-        console.log(' i am clicked ');
-      })
-        
-      TweenMax.fromTo( project  , .7 , {x : '-550' , opacity : 0 } , {x : 0 , opacity : 1 }) ;
-       
+      imgAnimation()
     }
     else if(index.index === 2)
     {
@@ -88,7 +87,16 @@ new fullpage('#parallax', {
     }
     else {
       slideNumber.textContent = 1 ;
+      
     }
+  },
+
+
+  onSlideLeave: function(section, origin, destination, direction){
+    imgAnimation();
+    let item  = origin.item ;
+    let h1 = item.querySelector('.fp-tableCell h1') ;
+      gsap.fromTo(h1 , 1 , {y : '-350' , opacity : 0, duration: 0.9} , {y : 0 , opacity : 1 }) ;
   }
   
 });
@@ -98,4 +106,20 @@ function getContentPage(pageName){
   contentPage = document.querySelector(`.${pageName}`);
   // contentPage = pageName;
   console.log(contentPage);
+}
+
+const imgAnimation = () =>{
+  gsap.registerPlugin(CSSRulePlugin);
+  const rule = CSSRulePlugin.getRule(".image-container:after");
+  let tl2 = new TimelineMax({delay : 0.3}) ;
+  tl2.to(rule, { duration: 1, width: "100%", ease: "Power2.ease" })
+ .to(rule, { duration: 0, right: 0, left: "unset" })
+ .to(rule, { duration: 1, width: "0%", ease: "Power2.ease" })
+ .to(".project-img", { duration: 0.2, opacity: 1, delay: -1 })
+ .from(".project-img", {
+     duration: 1,
+     scale: 1.4,
+     ease: "Power2.easeInOut",
+     delay: -1.2
+ });
 }

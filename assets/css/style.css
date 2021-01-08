@@ -200,10 +200,34 @@ h1 {
 }
 .slid__details {
   position: absolute;
+  overflow: hidden;
   top: 56%;
   font-size: 1.4rem;
   margin: 10px 0px;
 }
+
+.image-container {
+  /* position: relative; */
+  overflow: hidden;
+}
+.image-container::after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: burlywood;
+}
+.project-img {
+  width: 90%;
+  height: auto;
+  z-index: 1000;
+  opacity: 0;
+  border: 1px solid burlywood;
+  transform: all 0.5s ease;
+}
+
 .btn {
   padding: 10px;
   border: 2px solid burlywood;
@@ -247,7 +271,7 @@ h1 {
 }
 .schedule {
   position: absolute;
-  top: 20px;
+  top: 10%;
   left: 10%;
   width: 40%;
   height: 90vh;
@@ -342,7 +366,6 @@ h1 {
   }
   .connect-with-me {
     width: 100%;
-    z-index: 100;
   }
   .about-me {
     top: 37%;
@@ -351,13 +374,13 @@ h1 {
     z-index: 300;
   }
   .xs-top {
-    top: 0px;
+    top: 10px;
     width: auto;
     font-size: 2rem;
   }
   .schedule {
     width: 90%;
-    top: 30px;
+    top: 9%;
     margin: 3px auto;
     left: 5%;
   }
