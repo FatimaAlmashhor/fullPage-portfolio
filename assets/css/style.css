@@ -73,11 +73,14 @@ body {
   justify-content: center;
   width: 60%;
   list-style-type: none;
+  z-index: 100;
   /* margin: 40% auto 0px; */
 }
 .connect-with-me li {
   margin: 20px 40px;
+  cursor: pointer;
 }
+
 .bg-frame {
   width: 400px;
   height: 400px;
@@ -186,6 +189,9 @@ h1 {
 .slide-3 {
   right: 27%;
 }
+.slide-4 {
+  right: 1%;
+}
 .slid__img-picker img {
   width: 100%;
   height: auto;
@@ -255,7 +261,7 @@ h1 {
   top: 45%;
   left: 30%;
   transform: translate(-45%, -30%);
-  letter-spacing: 4px;
+  word-spacing: 7px;
   margin: 30px 30px;
   width: 40%;
 }

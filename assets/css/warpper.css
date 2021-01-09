@@ -132,7 +132,7 @@ html {
 .project-descrept {
   width: 30%;
   flex: 30%;
-  letter-spacing: 4px;
+  word-spacing: 7px;
 }
 .bg-frame {
   width: 550px;
