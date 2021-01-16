@@ -14,6 +14,8 @@ body {
   color: white;
   transition: all 0.3s ease-in-out;
   scroll-behavior: smooth;
+  width: 100%;
+  min-height: 100vh;
 }
 
 /* loading the page */
