@@ -41,10 +41,7 @@ new fullpage('#parallax', {
           
         } ,
       ) ;
-    }
-    if (origin.index === 4){
       document.querySelector('.connect-with-me').style.display = 'none'
-      console.log('here');
     }
   },
   onLeave: function(anchorLink, index, slideAnchor, slideIndex){

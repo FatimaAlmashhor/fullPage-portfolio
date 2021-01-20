@@ -320,4 +320,9 @@ html {
   .project-title {
     font-size: 3.2rem;
   }
+  .bg-frame {
+    width: 350px;
+    height: 350px;
+    border-width: 17px;
+  }
 }
